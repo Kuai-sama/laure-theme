@@ -1,0 +1,20 @@
+{
+  "name": "Laure-theme",
+  "displayName": "Laurë",
+  "description": "An elegant dark theme inspired by the golden light of Lothlórien. Warm amber tones, natural hues, and soft contrast designed for long coding sessions without eye strain.",
+  "version": "1.0.0",
+  "publisher": "Kuaï",
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Laurë",
+        "uiTheme": "vs-dark",
+        "path": "./themes/laure-theme.json"
+      }
+    ]
+  }
+}
