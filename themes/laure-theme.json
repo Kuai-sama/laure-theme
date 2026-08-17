@@ -286,21 +286,40 @@
         "foreground": "#9bc4bc"
       }
     },
-    { "name": "Python: def/class storage keywords", "scope": ["storage.type.function.python", "storage.type.class.python"], "settings": { "foreground": "#d4a949", "fontStyle": "bold" } },
-    { "name": "Python: control flow", "scope": ["keyword.control.flow.python", "keyword.control.import.python"], "settings": { "foreground": "#d4a949", "fontStyle": "bold" } },
-    { "name": "Python: logical operators", "scope": ["keyword.operator.logical.python"], "settings": { "foreground": "#d4a949" } },
-    { "name": "Python: True/False/None", "scope": ["constant.language.python"], "settings": { "foreground": "#d98f4e", "fontStyle": "italic" } },
-    { "name": "Python: function/class names", "scope": ["entity.name.function.python", "meta.function.python entity.name.function"], "settings": { "foreground": "#e0c07a" } },
-    { "name": "Python: class names", "scope": ["entity.name.class.python", "entity.name.type.class.python"], "settings": { "foreground": "#f0cf6e", "fontStyle": "bold" } },
-    { "name": "Python: decorators", "scope": ["entity.name.function.decorator.python", "meta.function.decorator.python support.type.python"], "settings": { "foreground": "#d98f4e", "fontStyle": "italic" } },
-    { "name": "Python: decorator punctuation @", "scope": ["punctuation.definition.decorator.python"], "settings": { "foreground": "#d98f4e" } },
-    { "name": "Python: self / cls", "scope": ["variable.parameter.function.language.special.self.python", "variable.parameter.function.language.special.cls.python", "variable.language.special.self.python"], "settings": { "foreground": "#b79bc9", "fontStyle": "italic" } },
-    { "name": "Python: builtins", "scope": ["support.function.builtin.python", "support.function.magic.python"], "settings": { "foreground": "#9bc4bc" } },
-    { "name": "Python: magic methods (dunder)", "scope": ["support.function.magic.python", "meta.function.python entity.name.function.magic"], "settings": { "foreground": "#e0c07a", "fontStyle": "italic" } },
-    { "name": "Python: docstrings", "scope": ["string.quoted.docstring.multi.python", "string.quoted.docstring.python"], "settings": { "foreground": "#7fa89c", "fontStyle": "italic" } },
-    { "name": "Python: f-string braces", "scope": ["punctuation.definition.template-expression.python", "punctuation.section.embedded.python", "meta.fstring.python punctuation.definition.string.begin.python"], "settings": { "foreground": "#d98f4e" } },
-    { "name": "Python: parameter names", "scope": ["variable.parameter.function.python"], "settings": { "foreground": "#c3d3bd", "fontStyle": "italic" } },
-    { "name": "Python: exceptions/types", "scope": ["support.type.exception.python"], "settings": { "foreground": "#f0cf6e" } },
-    { "name": "Python: dict/set keys", "scope": ["meta.item-access.python"], "settings": { "foreground": "#a9c4b3" } }
+    {
+      "name": "Python: True/False/None",
+      "scope": ["constant.language.python"],
+      "settings": { "foreground": "#d98f4e", "fontStyle": "italic" }
+    },
+    {
+      "name": "Python: decorators",
+      "scope": ["entity.name.function.decorator.python", "meta.function.decorator.python support.type.python", "punctuation.definition.decorator.python"],
+      "settings": { "foreground": "#d98f4e", "fontStyle": "italic" }
+    },
+    {
+      "name": "Python: self / cls",
+      "scope": ["variable.parameter.function.language.special.self.python", "variable.parameter.function.language.special.cls.python", "variable.language.special.self.python"],
+      "settings": { "foreground": "#b79bc9", "fontStyle": "italic" }
+    },
+    {
+      "name": "Python: magic methods (dunder)",
+      "scope": ["support.function.magic.python", "meta.function.python entity.name.function.magic"],
+      "settings": { "foreground": "#e0c07a", "fontStyle": "italic" }
+    },
+    {
+      "name": "Python: docstrings",
+      "scope": ["string.quoted.docstring.multi.python", "string.quoted.docstring.python"],
+      "settings": { "foreground": "#7fa89c", "fontStyle": "italic" }
+    },
+    {
+      "name": "Python: f-strings",
+      "scope": ["punctuation.definition.template-expression.python", "punctuation.section.embedded.python"],
+      "settings": { "foreground": "#d98f4e" }
+    },
+    {
+      "name": "Python: parameter names",
+      "scope": ["variable.parameter.function.python"],
+      "settings": { "foreground": "#c3d3bd", "fontStyle": "italic" }
+    }
   ]
 }
