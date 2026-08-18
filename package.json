@@ -27,6 +27,10 @@
   "scripts": {
     "lint": "bunx jsonlint -q themes/*.json package.json",
     "package": "bunx @vscode/vsce package --allow-missing-repository",
-    "test": "bun run lint && bun run package"
+    "test": "bun run lint && bun run package",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
