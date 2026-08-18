@@ -24,7 +24,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Dry-run packaging VSIX
-        run: bunx @vscode/vsce package --no-git-tag-check
+        run: bunx @vscode/vsce package --allow-missing-repository
         
       - name: Verify README.md inclusion in VSIX
         run: |
@@ -55,7 +55,7 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Package VSIX
-        run: bunx @vscode/vsce package --no-git-tag-check
+        run: bunx @vscode/vsce package --allow-missing-repository
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
