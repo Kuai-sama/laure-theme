@@ -20,17 +20,24 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Validate JSON syntax
+        run: bun run lint
+
       - name: Dry-run packaging VSIX
-        run: bunx @vscode/vsce package --allow-missing-repository
-        
+        run: bun run package
+
       - name: Verify README.md inclusion in VSIX
         run: |
           if unzip -l *.vsix | grep -iq "extension/readme.md"; then
-            echo "V README.md is present in the VSIX package"
+            echo "✓ README.md is present in the VSIX package"
           else
-            echo "X ERROR: README.md was excluded by .vscodeignore!"
+            echo "✗ ERROR: README.md was excluded by .vscodeignore!"
             exit 1
           fi
+
+      - name: Cleanup VSIX artifact
+        if: always()
+        run: rm -f *.vsix
 
   # 2. Automated GitHub Release on Tag (CD)
   release:
@@ -49,7 +56,7 @@ jobs:
           bun-version: latest
 
       - name: Package VSIX
-        run: bunx @vscode/vsce package --allow-missing-repository
+        run: bun run package
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
