@@ -1,0 +1,67 @@
+name: CI & GitHub Release
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # 1. PR / Push validation (CI)
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Check TypeScript types
+        run: bunx tsc --noEmit
+
+      - name: Dry-run packaging VSIX
+        run: bunx @vscode/vsce package --no-git-tag-check
+        
+      - name: Verify README.md inclusion in VSIX
+        run: |
+          if unzip -l *.vsix | grep -q "extension/README.md"; then
+            echo "V README.md is present in the VSIX package"
+          else
+            echo "X ERROR: README.md was excluded by .vscodeignore!"
+            exit 1
+          fi
+
+  # 2. Automated GitHub Release on Tag (CD)
+  release:
+    needs: build-and-test
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Requis pour créer une Release GitHub et y attacher des fichiers
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Package VSIX
+        run: bunx @vscode/vsce package --no-git-tag-check
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "*.vsix"
+          generate_release_notes: true
