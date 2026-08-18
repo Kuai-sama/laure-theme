@@ -25,7 +25,7 @@ jobs:
         
       - name: Verify README.md inclusion in VSIX
         run: |
-          if unzip -l *.vsix | grep -q "extension/README.md"; then
+          if unzip -l *.vsix | grep -iq "extension/readme.md"; then
             echo "V README.md is present in the VSIX package"
           else
             echo "X ERROR: README.md was excluded by .vscodeignore!"
