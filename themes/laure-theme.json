@@ -1,4 +1,5 @@
 {
+  "$schema": "vscode://schemas/color-theme",
   "name": "Laurë",
   "type": "dark",
   "colors": {

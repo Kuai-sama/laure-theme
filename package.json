@@ -2,7 +2,7 @@
   "name": "laure-theme",
   "displayName": "Laurë",
   "description": "An elegant dark theme inspired by the golden light of Lothlórien. Warm amber tones, natural hues, and soft contrast designed for long coding sessions without eye strain.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "Kuai",
   "license": "MIT",
   "repository": {
@@ -23,5 +23,10 @@
         "path": "./themes/laure-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "lint": "bunx jsonlint -q themes/*.json package.json",
+    "package": "bunx @vscode/vsce package --allow-missing-repository",
+    "test": "bun run lint && bun run package"
   }
 }
