@@ -1,4 +1,4 @@
-name: CI & GitHub Release
+name: CI, Release & Marketplace Publish
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  # 1. PR / Push validation (CI)
+  # 1. Validation PR et Push
   build-and-test:
     runs-on: ubuntu-latest
     steps:
@@ -35,17 +35,20 @@ jobs:
             exit 1
           fi
 
-      - name: Cleanup VSIX artifact
-        if: always()
-        run: rm -f *.vsix
+      - name: Upload VSIX Artifact
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: actions/upload-artifact@v4
+        with:
+          name: vsix-package
+          path: "*.vsix"
 
-  # 2. Automated GitHub Release on Tag (CD)
-  release:
+  # 2. Release GitHub & Publication Marketplace
+  release-and-publish:
     needs: build-and-test
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Required to create a GitHub Release and attach assets
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -55,11 +58,16 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Package VSIX
-        run: bun run package
+      - name: Download VSIX Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: vsix-package
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: "*.vsix"
           generate_release_notes: true
+
+      - name: Publish to VS Code Marketplace
+        run: bunx @vscode/vsce publish --packagePath *.vsix -p ${{ secrets.VSCE_PAT }}
