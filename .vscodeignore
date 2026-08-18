@@ -34,4 +34,3 @@ bun.lockb
 tsconfig.json
 index.ts
 commitrule
-*.md
