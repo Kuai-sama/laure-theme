@@ -33,4 +33,9 @@ bun.lockb
 *.orig
 tsconfig.json
 index.ts
-commitrule
+
+# Explicit inclusions for VSIX packaging
+!README.md
+!CHANGELOG.md
+!LICENSE
+!assets/**
