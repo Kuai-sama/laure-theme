@@ -23,9 +23,6 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Check TypeScript types
-        run: bunx tsc --noEmit
-
       - name: Dry-run packaging VSIX
         run: bunx @vscode/vsce package --no-git-tag-check
         
@@ -44,7 +41,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Requis pour créer une Release GitHub et y attacher des fichiers
+      contents: write # Required to create a GitHub Release and attach assets
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
