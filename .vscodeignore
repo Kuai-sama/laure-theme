@@ -1,0 +1,41 @@
+# Git and Node dependencies
+.git/
+node_modules/
+
+# VS Code and Extension artifacts
+*.vsix
+.vscode/
+
+# Build and Output directories
+out/
+generated/
+coverage/
+
+# Logs, Temp, and Environment
+*.tmp
+*.temp
+*.log
+.env
+*.debug
+
+# Package Manager Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-shrinkwrap.json
+bun.lockb
+
+# Development / Config files
+*.tsbuildinfo
+**.metadata
+.cache
+*.bak
+*.orig
+tsconfig.json
+index.ts
+
+# Explicit inclusions for VSIX packaging
+!README.md
+!CHANGELOG.md
+!LICENSE
+!assets/**
