@@ -2,9 +2,33 @@
   "name": "laure-vscode-dark-theme",
   "displayName": "Laurë Dark Theme",
   "description": "An elegant dark theme inspired by the golden light of Lothlórien. Warm amber tones, natural hues, and soft contrast designed for long coding sessions without eye strain.",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "publisher": "Kuai",
   "license": "MIT",
+  "keywords": [
+      "laurë",
+      "color-theme",
+      "dark-theme",
+      "vscode-theme",
+      "theme",
+      "syntax-highlighting",
+      "developer-tools",
+      "vscode",
+      "vscode-extension",
+      "tolkien",
+      "jrrtolkien",
+      "jrr-tolkien",
+      "lord-of-the-rings",
+      "lordoftherings",
+      "lotr",
+      "lothlorien",
+      "elvish",
+      "amber",
+      "gold",
+      "nature",
+      "eye strain",
+      "cozy"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Kuai-sama/laure-theme"
@@ -18,9 +42,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "Laurë",
+        "label": "Laurë (holt/wood)",
         "uiTheme": "vs-dark",
-        "path": "./themes/laure-theme.json"
+        "path": "./themes/laure-theme-holt.json"
       }
     ]
   },
