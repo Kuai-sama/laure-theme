@@ -45,6 +45,11 @@
         "label": "Laurë (holt/wood)",
         "uiTheme": "vs-dark",
         "path": "./themes/laure-theme-holt.json"
+      },
+      {
+        "label": "Laurë (Night)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/laure-theme-night.json"
       }
     ]
   },
