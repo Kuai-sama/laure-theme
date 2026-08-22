@@ -7,7 +7,6 @@
     "disabledForeground": "#445b8a",
     "widget.shadow": "#00000066",
     "selection.background": "#2c5c9eaa",
-
     "editor.background": "#0d2144",
     "editor.foreground": "#e3eaf6",
     "editorLineNumber.foreground": "#445b8a",
@@ -38,7 +37,6 @@
     "editorGutter.deletedBackground": "#e08a90",
     "editorCodeLens.foreground": "#7285b7",
     "editorOverviewRuler.border": "#0d2144",
-
     "editorWidget.background": "#1a3766",
     "editorWidget.border": "#2a4f85",
     "editorSuggestWidget.background": "#1a3766",
@@ -47,14 +45,12 @@
     "editorSuggestWidget.highlightForeground": "#ffc94d",
     "editorHoverWidget.background": "#1a3766",
     "editorHoverWidget.border": "#2a4f85",
-
     "activityBar.background": "#071527",
     "activityBar.foreground": "#cdd9f0",
     "activityBar.inactiveForeground": "#445b8a",
     "activityBar.border": "#00000000",
     "activityBarBadge.background": "#f5a623",
     "activityBarBadge.foreground": "#071527",
-
     "sideBar.background": "#0a1a33",
     "sideBar.foreground": "#93a6c9",
     "sideBar.border": "#00000000",
@@ -67,7 +63,6 @@
     "list.hoverBackground": "#1a3766aa",
     "list.focusBackground": "#234b82",
     "tree.indentGuidesStroke": "#2a4f85",
-
     "statusBar.background": "#071527",
     "statusBar.foreground": "#93a6c9",
     "statusBar.border": "#00000000",
@@ -77,13 +72,11 @@
     "statusBarItem.hoverBackground": "#234b82",
     "statusBarItem.remoteBackground": "#2c5c9e",
     "statusBarItem.remoteForeground": "#ffc94d",
-
     "titleBar.activeBackground": "#071527",
     "titleBar.activeForeground": "#e3eaf6",
     "titleBar.inactiveBackground": "#071527",
     "titleBar.inactiveForeground": "#445b8a",
     "titleBar.border": "#00000000",
-
     "tab.activeBackground": "#0d2144",
     "tab.activeForeground": "#ffc94d",
     "tab.activeBorderTop": "#f5a623",
@@ -94,13 +87,11 @@
     "editorGroupHeader.tabsBackground": "#071527",
     "editorGroupHeader.tabsBorder": "#00000000",
     "editorGroup.border": "#16305c",
-
     "panel.background": "#0a1a33",
     "panel.border": "#16305c",
     "panelTitle.activeForeground": "#ffc94d",
     "panelTitle.activeBorder": "#f5a623",
     "panelTitle.inactiveForeground": "#5b74a3",
-
     "terminal.background": "#0d2144",
     "terminal.foreground": "#e3eaf6",
     "terminal.ansiBlack": "#0d2144",
@@ -119,7 +110,6 @@
     "terminal.ansiBrightMagenta": "#cbb0e8",
     "terminal.ansiBrightCyan": "#c0eaf5",
     "terminal.ansiBrightWhite": "#ffffff",
-
     "button.background": "#f5a623",
     "button.foreground": "#071527",
     "button.hoverBackground": "#ffc94d",
@@ -134,28 +124,23 @@
     "badge.background": "#f5a623",
     "badge.foreground": "#071527",
     "progressBar.background": "#f5a623",
-
     "scrollbar.shadow": "#00000000",
     "scrollbarSlider.background": "#445b8a55",
     "scrollbarSlider.hoverBackground": "#445b8a88",
     "scrollbarSlider.activeBackground": "#f5a62366",
-
     "minimap.background": "#0d2144",
     "minimap.selectionHighlight": "#2c5c9e",
     "minimapSlider.background": "#445b8a33",
     "minimapSlider.hoverBackground": "#445b8a55",
-
     "notificationCenterHeader.background": "#1a3766",
     "notifications.background": "#1a3766",
     "notifications.border": "#2a4f85",
-
     "gitDecoration.modifiedResourceForeground": "#e0a468",
     "gitDecoration.addedResourceForeground": "#a9d18a",
     "gitDecoration.deletedResourceForeground": "#e08a90",
     "gitDecoration.untrackedResourceForeground": "#7ec4e0",
     "gitDecoration.ignoredResourceForeground": "#445b8a",
     "gitDecoration.conflictingResourceForeground": "#f0a8ac",
-
     "peekView.border": "#f5a623",
     "peekViewEditor.background": "#0a1a33",
     "peekViewResult.background": "#0a1a33",
@@ -301,7 +286,6 @@
         "foreground": "#9fd8ee"
       }
     },
-
     { "name": "Python: def/class storage keywords", "scope": ["storage.type.function.python", "storage.type.class.python"], "settings": { "foreground": "#f5a623", "fontStyle": "bold" } },
     { "name": "Python: control flow", "scope": ["keyword.control.flow.python", "keyword.control.import.python"], "settings": { "foreground": "#f5a623", "fontStyle": "bold" } },
     { "name": "Python: logical operators", "scope": ["keyword.operator.logical.python"], "settings": { "foreground": "#f5a623" } },
