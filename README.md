@@ -2,12 +2,14 @@
 
 > **Laurë** (*Quenya*): "Golden light or color"
 
-**Laurë** is a collection of Visual Studio Code themes inspired by the world of J.R.R. Tolkien. Designed to bring serenity and elegance to your development environment, its color palette focuses on warm, luminous tones reflecting the radiance of Quenya.
+**Laurë** is a collection of Visual Studio Code themes inspired by the world of J.R.R. Tolkien.Designed to bring serenity and elegance to your development environment, its color palettes focus on warm, luminous tones reflecting the radiance of Quenya across distinct dark variations.
 
 ---
 
-## Preview
-### Core Palette Overview
+## Themes & Palettes
+
+### 1. Laurë (Default Dark)
+Inspired by lush evergreen forests and warm sunlight, featuring deep woodland green backgrounds paired with golden accents.
 
 | Swatch | Color Name | Hex Code | Role / Usage |
 | :---: | :--- | :--- | :--- |
@@ -23,8 +25,33 @@
 | ![](https://img.shields.io/badge/-%23c78fd9?style=flat-square&color=c78fd9) | **Dusk Lavender** | `#c78fd9` | Python `self` / `cls` & Special Symbols |
 
 ---
+
+### 2. Laurë Night Theme
+A deep midnight variation combining oceanic midnight blue tones with vibrant amber and starlight accents.
+
+| Swatch | Color Name | Hex Code | Role / Usage |
+| :---: | :--- | :--- | :--- |
+| ![](https://img.shields.io/badge/-%230d2144?style=flat-square&color=0d2144) | **Midnight Abyss** | `#0d2144` | Main Editor Background |
+| ![](https://img.shields.io/badge/-%23071527?style=flat-square&color=071527) | **Deep Night** | `#071527` | Activity Bar, Status Bar & Title Bar |
+| ![](https://img.shields.io/badge/-%230a1a33?style=flat-square&color=0a1a33) | **Nocturne Blue** | `#0a1a33` | Side Bar, Panels & Inactive Tabs |
+| ![](https://img.shields.io/badge/-%23e3eaf6?style=flat-square&color=e3eaf6) | **Starlight White** | `#e3eaf6` | Main Foreground Text |
+| ![](https://img.shields.io/badge/-%23f5a623?style=flat-square&color=f5a623) | **Radiant Gold** | `#f5a623` | Keywords, Badges & Focus Highlights |
+| ![](https://img.shields.io/badge/-%23ffc94d?style=flat-square&color=ffc94d) | **Bright Amber** | `#ffc94d` | Cursor, Active Tab & Highlight Text |
+| ![](https://img.shields.io/badge/-%23a9d18a?style=flat-square&color=a9d18a) | **Glade Green** | `#a9d18a` | Strings, Added Git Lines |
+| ![](https://img.shields.io/badge/-%23e0a468?style=flat-square&color=e0a468) | **Copper Light** | `#e0a468` | Numbers, Constants & Decorators |
+| ![](https://img.shields.io/badge/-%237ec4e0?style=flat-square&color=7ec4e0) | **Astral Blue** | `#7ec4e0` | Functions, Bracket Guides & Links |
+| ![](https://img.shields.io/badge/-%23b79bd9?style=flat-square&color=b79bd9) | **Twilight Violet** | `#b79bd9` | Python `self` / `cls` & Special Symbols |
+
+---
+
+## Preview
 <p align="center">
   <img src=".github/assets/Main-theme.png" alt="Laurë Theme Screenshot" width="700">
+</p>
+
+<p align="center">
+  <img src=".github/assets/Night-theme.png
+" alt="Laurë Night Theme Screenshot" width="700">
 </p>
 
 ## Installation
