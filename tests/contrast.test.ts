@@ -1,18 +1,5 @@
 import { describe, test, expect } from "bun:test";
-import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
-import { checkPair, DEFAULT_PAIRS, type VSCodeTheme } from "./contrast";
-
-const THEMES_DIR = join(import.meta.dir, "..", "themes");
-
-function loadThemes(): { file: string; theme: VSCodeTheme }[] {
-  return readdirSync(THEMES_DIR)
-    .filter((f) => f.endsWith(".json"))
-    .map((file) => ({
-      file,
-      theme: JSON.parse(readFileSync(join(THEMES_DIR, file), "utf-8")),
-    }));
-}
+import { checkPair, loadThemes, DEFAULT_PAIRS } from "./contrast";
 
 const themes = loadThemes();
 

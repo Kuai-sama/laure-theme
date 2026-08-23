@@ -1,7 +1,11 @@
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { colord, extend } from "colord";
 import a11yPlugin from "colord/plugins/a11y";
 
 extend([a11yPlugin]);
+
+const THEMES_DIR = join(import.meta.dir, "..", "themes");
 
 export interface ThemeColors {
   [key: string]: string;
@@ -40,6 +44,30 @@ export const DEFAULT_PAIRS: ContrastPair[] = [
     fgKey: "editor.foreground",
     minRatio: 4.5,
   },
+  {
+    label: "Sidebar background/foreground",
+    bgKey: "sideBar.background",
+    fgKey: "sideBar.foreground",
+    minRatio: 4.5,
+  },
+  {
+    label: "Status bar background/foreground",
+    bgKey: "statusBar.background",
+    fgKey: "statusBar.foreground",
+    minRatio: 4.5,
+  },
+  {
+    label: "Activity bar background/foreground",
+    bgKey: "activityBar.background",
+    fgKey: "activityBar.foreground",
+    minRatio: 4.5,
+  },
+  {
+    label: "Tab active background/foreground",
+    bgKey: "tab.activeBackground",
+    fgKey: "tab.activeForeground",
+    minRatio: 4.5,
+  },
 ];
 
 /** Returns the WCAG contrast ratio between two hex colors (1:1 to 21:1). */
@@ -67,4 +95,14 @@ export function checkPair(theme: VSCodeTheme, pair: ContrastPair): ContrastResul
 
   const ratio = getContrastRatio(fg, bg);
   return { ...pair, bg, fg, ratio, pass: ratio >= pair.minRatio };
+}
+
+/** Loads every theme JSON file from the themes/ directory. */
+export function loadThemes(): { file: string; theme: VSCodeTheme }[] {
+  return readdirSync(THEMES_DIR)
+    .filter((f) => f.endsWith(".json"))
+    .map((file) => ({
+      file,
+      theme: JSON.parse(readFileSync(join(THEMES_DIR, file), "utf-8")),
+    }));
 }

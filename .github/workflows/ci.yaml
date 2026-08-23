@@ -33,7 +33,7 @@ jobs:
         run: bun run lint
 
       - name: Check WCAG contrast ratios
-        run: bun test tests/contrast.test.ts
+        run: bun run test:contrast
 
       - name: Dry-run packaging VSIX
         run: bun run package
@@ -85,6 +85,6 @@ jobs:
           generate_release_notes: true
 
       - name: Publish to VS Code Marketplace
+        run: bunx @vscode/vsce publish --packagePath *.vsix -p ${{ secrets.VSCE_PAT }}
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: bunx @vscode/vsce publish --packagePath *.vsix
