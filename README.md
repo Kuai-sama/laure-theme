@@ -50,8 +50,7 @@ A deep midnight variation combining oceanic midnight blue tones with vibrant amb
 </p>
 
 <p align="center">
-  <img src=".github/assets/Night-theme.png
-" alt="Laurë Night Theme Screenshot" width="700">
+  <img src=".github/assets/Night-theme.png" alt="Laurë Night Theme Screenshot" width="700">
 </p>
 
 ## Installation
